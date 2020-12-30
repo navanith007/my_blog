@@ -68,7 +68,7 @@ I've used both technical analysis and fundamental analysis on the data sets by r
 Note: The below shown data is not raw data they are preprocessed data.  
 
 ## 6.1 DJIA Stock data and Reddit news  
-<img src="../../../../assets/images/SM_Prediction/data_1.png"/>   
+<img src="../../../../assets/images/SM_Prediction/data_1.PNG"/>   
 The above data is the DJIA stock data. let's understand the categorical features which are generated from the OHLC values.  
 
 If close price of today is greater than the yesterday the move_close is increased otherwise it's decreased. Similarly for move_open, move_high, move_low are generated. move_close_open is whether close price is greater than open price on that day.  
@@ -76,27 +76,27 @@ If close price of today is greater than the yesterday the move_close is increase
 Along with the stock data we have top 25 headlines of reddit news also.  
 
 ## 6.2Microsoft Stock data and technology news  
-<img src="../../../../assets/images/SM_Prediction/data_2.png"/>     
+<img src="../../../../assets/images/SM_Prediction/data_2.PNG"/>     
 The above data set is the stock data of Microsoft company with normalized_title is the technological related news of Microsoft published on that day. `tomorrow` is the class label which represents the move_close_price on next day.  
 <hr>  
 
 # 7. Exploring the data.  
 ## 7.1 DJIA Stock Data and Reddit news  
 Let's see how the class label distributed.  
-<img src="../../../../assets/images/SM_Prediction/class_label.png"/>    
+<img src="../../../../assets/images/SM_Prediction/class_label.PNG"/>    
 You can clearly see that the class label is balanced in the DJIA stock dataset.  
 Similarly, we can explore word cloud of Reddit news in each class.  
-<img src="../../../../assets/images/SM_Prediction/news_class_1.png"/>    
-<img src="../../../../assets/images/SM_Prediction/news_class_2.png"/>    
+<img src="../../../../assets/images/SM_Prediction/news_class_1.PNG"/>    
+<img src="../../../../assets/images/SM_Prediction/news_class_2.PNG"/>    
 
 From the above word clouds we can clearly see that the news contains mostly country names and some political news which doesn't related to the stock data. From this, we can infer that these news is not highly correlated with the stock data. So that the model may not perform well with this data.  
 
 ## 7.2 Microsoft stock data and it's technology news.  
-<img src="../../../../assets/images/SM_Prediction/class_label_msft.png"/>   
+<img src="../../../../assets/images/SM_Prediction/class_label_msft.PNG"/>   
 You can see that the Microsoft stock data class label is also balanced.  
-<img src="../../../../assets/images/SM_Prediction/msft_news_class1.png"/>  
+<img src="../../../../assets/images/SM_Prediction/msft_news_class1.PNG"/>  
 <br><br>  
-<img src="../../../../assets/images/SM_Prediction/msft_news_class2.png"/>  
+<img src="../../../../assets/images/SM_Prediction/msft_news_class2.PNG"/>  
 
 From the above word cloud we can infer that there are not many different words between the two classes. But, may be the sentiment of the statements might be different.  
 <hr>  
@@ -173,7 +173,7 @@ The above code represents how to get the sentiment scores of given sentence.
 ## 8.2 ML models  
 I've used two ML models one is KNN and another one is SVM with different encoded data on DJIA data set. But, the results are very poor test accuracy is being in the range of 48 to 52 only. The one reason being that the news data is top 25 headlines in Reddit which are not related to stock data most of the times. I'm adding the results with different models.  
 
-<img src="../../../../assets/images/SM_Prediction/model_comparision.png"/>   
+<img src="../../../../assets/images/SM_Prediction/model_comparision.PNG"/>   
 we can clearly see that the results are not great.  
 <hr>  
 
